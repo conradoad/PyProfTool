@@ -72,11 +72,11 @@ class PyProfTool:
             print("{0:<20}{1:<20}{2:<20}{3:<20}{4:<20}{5:<20}{6:<20}"
                   .format(point,
                           "|   " + format(self.prof_points[point]["time_acc"]*1000 /
-                                          self.prof_points[point]["times"], ".3f"),
+                                          self.prof_points[point]["times"], ".4f"),
                           "|   " + format(self.prof_points[point]["times"] /
-                                          self.prof_points[point]["time_acc"], ".3f"),
-                          "|   " + format(self.prof_points[point]["time_min"]*1000, ".3f"),
-                          "|   " + format(self.prof_points[point]["time_max"]*1000, ".3f"),
+                                          self.prof_points[point]["time_acc"], ".1f"),
+                          "|   " + format(self.prof_points[point]["time_min"]*1000, ".4f"),
+                          "|   " + format(self.prof_points[point]["time_max"]*1000, ".4f"),
                           "|   " + format(self.prof_points[point]["times"]),
                           "|   " + format(self.prof_points[point]["time_acc"]*1000, ".3f")))
 
