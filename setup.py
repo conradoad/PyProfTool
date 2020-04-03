@@ -1,12 +1,15 @@
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name='pyproftool',
     version='0.2.1',
     packages=[''],
-    url='',
+    url='https://github.com/conradoad/PyProfTool',
     license='',
-    author='conrado',
+    author='Conrado Costa',
     author_email='conradocostaad@yahoo.com.br',
     description=''
 )
