@@ -61,6 +61,25 @@ class PyProfTool:
 
         self.prof_points[name]["running"] = False
 
+    def show(self):
+        print("\n{0:20}{1:20}{2:20}{3:20}{4:20}{5:20}{6:20}"
+              .format("Point", "|   Mean Time (ms)", "|   Mean Freq(cy/s)", "|   Min Time(ms)", "|   Max Time(ms)",
+                      "|   Num Exec", "|   Total Time(ms)"))
+        print("{0:20}{1:20}{2:20}{3:20}{4:20}{5:20}{6:20}"
+              .format("----------------", "|   --------------", "|   --------------", "|   --------------",
+                      "|   --------------", "|   --------------", "|   --------------"))
+        for point in self.prof_points:
+            print("{0:<20}{1:<20}{2:<20}{3:<20}{4:<20}{5:<20}{6:<20}"
+                  .format(point,
+                          "|   " + format(self.prof_points[point]["time_acc"]*1000 /
+                                          self.prof_points[point]["times"], ".3f"),
+                          "|   " + format(self.prof_points[point]["times"] /
+                                          self.prof_points[point]["time_acc"], ".3f"),
+                          "|   " + format(self.prof_points[point]["time_min"]*1000, ".3f"),
+                          "|   " + format(self.prof_points[point]["time_max"]*1000, ".3f"),
+                          "|   " + format(self.prof_points[point]["times"]),
+                          "|   " + format(self.prof_points[point]["time_acc"]*1000, ".3f")))
+
     def enable(self):
         self.enabled = True
 
