@@ -3,9 +3,10 @@ import time
 
 class PyProfTool:
 
-    def __init__(self):
+    def __init__(self, description):
         self.enabled = True
         self.prof_points = {}
+        self.description = description
 
     def start_point(self, name):
         if not self.enabled:
@@ -62,7 +63,8 @@ class PyProfTool:
         self.prof_points[name]["running"] = False
 
     def show(self):
-        print("\n{0:20}{1:20}{2:20}{3:20}{4:20}{5:20}{6:20}"
+        print("\n" + self.description + ":")
+        print("{0:20}{1:20}{2:20}{3:20}{4:20}{5:20}{6:20}"
               .format("Point", "|   Mean Time (ms)", "|   Mean Freq(cy/s)", "|   Min Time(ms)", "|   Max Time(ms)",
                       "|   Num Exec", "|   Total Time(ms)"))
         print("{0:20}{1:20}{2:20}{3:20}{4:20}{5:20}{6:20}"
