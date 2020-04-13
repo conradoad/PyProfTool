@@ -5,11 +5,11 @@ with open("README.md", "r") as fh:
 
 setup(
     name='pyproftool',
-    version='0.2.1',
+    version='0.2.3',
     packages=[''],
     url='https://github.com/conradoad/PyProfTool',
     license='',
-    author='Conrado Costa',
+    author='conradoad',
     author_email='conradocostaad@yahoo.com.br',
     description=''
 )
