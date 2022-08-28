@@ -32,6 +32,7 @@ for _ in range(5):
 prof.end_point('All code')
 
 prof.show()
-### Output:
+```
 
+### Output:
 ![Screenshot from 2022-08-28 16-06-39](https://user-images.githubusercontent.com/29844580/187091177-af9acbb1-0603-4b90-8872-b0fa39206467.png)
