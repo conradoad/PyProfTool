@@ -1,18 +1,3 @@
-# PyProfTool
-Just a little Python-code profiler tool, written only for the purpose of practise coding, packing and publishing on PyPi repository.
-It measure the frequency and duration of delimited pieces of code.
----
-
----
-## Installing
-Run:
-```
-$ pip3 install PyProfTool
-```
----
-## Usage example
-### Code:
-```python
 from pyproftool import PyProfTool
 import time
 
